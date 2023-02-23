@@ -1,0 +1,26 @@
+{
+  "name": "linspell",
+  "version": "0.1.0",
+  "description": "LinSpell spelling correction algorithm TypeScript implementation",
+  "main": "./dist/index.js",
+  "author": "Krzysztof Siuda",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@swc/core": "^1.3.36",
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "@vitest/coverage-istanbul": "^0.28.5",
+    "eslint": "^8.34.0",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
+  },
+  "scripts": {
+    "test": "vitest --coverage",
+    "pre-build": "tsc --noemit && eslint . --ext .ts && prettier --write . && vitest run --coverage",
+    "dist": "tsc"
+  }
+}
